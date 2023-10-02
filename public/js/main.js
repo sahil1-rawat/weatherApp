@@ -20,8 +20,9 @@ const setTime=(timezone)=>{
     const curr_time = utc + 3600000 * offset;
     const curr_date = new Date(curr_time);
     string_date=curr_date.toString();
-    day.innerText=string_date.slice(0,3);
-    today.innerText=`${string_date.slice(4,7)} ${curr_date.getDate()}`
+    // day.innerText=string_date.slice(0,3);
+    day.innerText=`${string_date.slice(0,3)}, ${string_date.slice(4,7)} ${curr_date.getDate()}`
+    // today.innerText=`${string_date.slice(4,7)} ${curr_date.getDate()}`
      hrs = curr_date.getHours();
      mnt = curr_date.getMinutes();
     if (hrs > 11) {
